@@ -11,14 +11,14 @@ This demo is related to the Chinese remainder theorem.
 Given `a` and `e`, we know we have:
 
 ```
-n ≡ a[12]
+n ≡ a [12]
 ```
 
 Finding the condition for `e` requires looking at the pattern for `e` for consecutive `n`, they are pattern of 10 values (`0`, `1`, `1`, `2`, `2`, `3`, etc.)
 
-Let's call `ep` a variable so that:
+Let's call `f` a variable so that:
 
-| ep | e |
+| f | e |
 | --- | --- |
 |0 | 0 |
 |1 | 1 |
@@ -31,35 +31,35 @@ Let's call `ep` a variable so that:
 |8| 4|
 |9| 0|
 
-Given e, ep can have two values:
+Given e, f can have two values:
 
 ```
-ep = 2×e[10]     (if ep is even)
-ep = 2×e-1[10]   (if ep is odd)
+f ≡ 2×e [10]     (if f is even)
+f ≡ 2×e-1 [10]   (if f is odd)
 ```
 
 And we now can say:
 
 ```
-n ≡ ep[10]
+n ≡ f[10]
 ```
 
-We can remark that `a` and `ep` are necessarily of the same parity (and `n` is too).
+We can remark that `a` and `f` are necessarily of the same parity (and `n` is too).
 
-Given `n ≡ ep[10]` and `n ≡ a[12]` we have `u` and `v` so that:
+Given `n ≡ f[10]` and `n ≡ a[12]` we have `u` and `v` so that:
 
 ```
-n = 12×u + a = 10×v + ep
+n = 12×u + a = 10×v + f
 
 thus:
 
-12×u - 10×v = ep - a
+12×u - 10×v = f - a
 ```
 
 We define:
 
 ```
-c = (ep - a) ÷ 2
+c = (f - a) ÷ 2
 ```
 
 we now have:
@@ -98,14 +98,14 @@ and finally using `n = 12×u + a`:
 n = 12(c+5×k)+a = a+12×c+60×k
 ```
 
-using `c = (ep - a) ÷ 2` we have:
+using `c = (f - a) ÷ 2` we have:
 
 ```
-n = a+6×(ep-a)+60×k
-n = 6×ep-5×a+60×k
+n = a+6×(f-a)+60×k
+n = 6×f-5×a+60×k
 ```
 
-and thus, splitting the cases on the parity of `a` (which is the same as the parity of `ep` and `n` as we saw earlier):
+and thus, splitting the cases on the parity of `a` (which is the same as the parity of `f` and `n` as we saw earlier):
 
 ```
 n = 12e-5×a+60×k    if a is even
