@@ -44,9 +44,9 @@ And we now can say:
 n ≡ ep[10]
 ```
 
-We can remark that `a` and `ep` are necessarily of the same parity, and `n` is too.
+We can remark that `a` and `ep` are necessarily of the same parity (and `n` is too).
 
-We have:
+Given `n ≡ ep[10]` and `n ≡ a[12]` we have `u` and `v` so that:
 
 ```
 n = 12×u + a = 10×v + ep
